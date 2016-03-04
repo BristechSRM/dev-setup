@@ -1,0 +1,8 @@
+"*":
+  core: {}
+  editor:
+    invisibles: {}
+    tabLength: 4
+    tabType: "soft"
+  welcome:
+    showOnStartup: false
