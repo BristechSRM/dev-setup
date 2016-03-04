@@ -23,7 +23,3 @@ sudo echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" | sudo tee
 
 sudo apt-get update
 sudo apt-get install -y docker-engine
-
-# Install Nuget and Fake for backend
-cd /workspace/back/
-sh installNugetFake.sh
