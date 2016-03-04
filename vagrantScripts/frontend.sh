@@ -13,10 +13,5 @@ sudo apt-get install -y nodejs
 sudo npm install -g gulp
 sudo npm install -g webpack
 
-# npm on vagrant don't support symbolic links use: --no-bin-link
-echo 'heere 1'
-cd /workspace/front
-npm config set bin-links false
-npm install
 cd /home/vagrant
 echo "save-prefix=~" >> /home/vagrant/.npmrc
