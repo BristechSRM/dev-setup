@@ -17,7 +17,7 @@ Vagrant.configure(2) do |config|
   end
   
   config.vm.synced_folder ".", "/vagrant", disabled:true
-  config.vm.synced_folder ".", "/workspace"
+  config.vm.synced_folder "..", "/workspace"
   
   #Configure up with scripts
   config.vm.provision "shell", path: "vagrantScripts/backend.sh"
