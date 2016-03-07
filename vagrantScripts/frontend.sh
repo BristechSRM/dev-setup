@@ -15,3 +15,4 @@ sudo npm install -g webpack
 
 cd /home/vagrant
 echo "save-prefix=~" >> /home/vagrant/.npmrc
+sudo chown vagrant:vagrant -R /home/vagrant/.npmrc
