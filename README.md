@@ -35,6 +35,18 @@ Once the box has spun up and is fully provisioned you can navigate to `/workspac
 
 ## Building backend
 
+### Debugging
+
+When debugging this app from Visual studio / On Windows / Possibly with mono develop (Not checked)
+Because of its use of the network interfaces, you'll need to run Visual studio as administrator.
+However the better solution is to do the following:
+
+Open a command prompt as administrator and run the following command replacing username with your username
+
+`netsh http ad urlacl url=http://*:9000/ user=username`
+
+After running this command, you won't need to run visual studio as administrator again.
+
 ### Natively
 
 #### Build
