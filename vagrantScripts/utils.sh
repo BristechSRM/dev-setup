@@ -49,3 +49,7 @@ sudo pip install awscli
 su -c "aws configure set output json" vagrant
 #Set the default region for aws
 su -c "aws configure set region eu-west-1" vagrant
+
+#Set up vundle (vim plugin manager) and golang plugin
+su - vagrant -c 'git clone https://github.com/VundleVim/Vundle.vim.git /home/vagrant/.vim/bundle/Vundle.vim'
+su - vagrant -c 'vim -c PluginInstall'
