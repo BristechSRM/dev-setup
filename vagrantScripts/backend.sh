@@ -23,3 +23,13 @@ sudo echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" | sudo tee
 
 sudo apt-get update
 sudo apt-get install -y docker-engine
+
+#
+# Install and setup go
+#
+sudo apt-get install -y golang
+
+echo '' >> /home/vagrant/.bashrc
+echo '#GO' >> /home/vagrant/.bashrc
+echo 'export GOPATH=/workspace/speaker-comms' >> /home/vagrant/.bashrc
+echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin' >> /home/vagrant/.bashrc
