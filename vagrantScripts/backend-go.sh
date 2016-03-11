@@ -5,7 +5,8 @@
 # Install and setup go
 #
 wget https://storage.googleapis.com/golang/go1.6.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.6.linux-amd64.tar.gz
+tar -C /usr/local -xzf go1.6.linux-amd64.tar.gz
+rm go1.6.linux-amd64.tar.gz
 
 #
 # Add go environment variables for bash and zsh shells
