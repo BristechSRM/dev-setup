@@ -4,7 +4,8 @@
 #
 # Install and setup go
 #
-sudo apt-get install -y golang
+wget https://storage.googleapis.com/golang/go1.6.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.6.linux-amd64.tar.gz
 
 #
 # Add go environment variables for bash and zsh shells
@@ -12,4 +13,4 @@ sudo apt-get install -y golang
 echo '' | tee -a /home/vagrant/.bashrc /home/vagrant/.zshrc
 echo '#GO' | tee -a /home/vagrant/.bashrc /home/vagrant/.zshrc
 echo 'export GOPATH=/workspace/speaker-comms' | tee -a /home/vagrant/.bashrc /home/vagrant/.zshrc
-echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin' | tee -a /home/vagrant/.bashrc /home/vagrant/.zshrc
+echo 'export PATH=$PATH:/usr/local/go/bin' | tee -a /home/vagrant/.bashrc /home/vagrant/.zshrc
