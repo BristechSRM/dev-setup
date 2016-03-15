@@ -14,3 +14,6 @@ sudo echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" | sudo tee
 
 sudo apt-get update
 sudo apt-get install -y docker-engine
+
+# Add vagrant to the docker group
+sudo usermod -aG docker vagrant
