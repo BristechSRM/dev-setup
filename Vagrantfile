@@ -19,15 +19,10 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder ".", "/vagrant", disabled:true
   config.vm.synced_folder "..", "/workspace"
 
-  # Add .vimrc file which contains a plugin manager, golang plugin, view line numbers, easy to read colour, etc.
-  config.vm.provision "file", source:".vimrc", destination:"/home/vagrant/.vimrc"
-
   #Configure up with scripts
   config.vm.provision "shell", path: "vagrantScripts/backend-mono.sh"
 
   config.vm.provision "shell", path: "vagrantScripts/backend-docker.sh"
-
-  config.vm.provision "shell", path: "vagrantScripts/backend-go.sh"
 
   config.vm.provision "shell", path: "vagrantScripts/frontend.sh"
 
