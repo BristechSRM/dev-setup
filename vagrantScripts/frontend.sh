@@ -13,7 +13,7 @@ sudo apt-get install -y nodejs
 sudo npm install -g gulp
 sudo npm install -g webpack
 
-npm config set bin-links false
 cd /home/vagrant
 echo "save-prefix=~" >> /home/vagrant/.npmrc
+echo "bin-links=false" >> /home/vagrant/.npmrc
 sudo chown vagrant:vagrant -R /home/vagrant/.npmrc

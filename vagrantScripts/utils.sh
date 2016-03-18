@@ -17,6 +17,7 @@ zsh -f
 sudo su vagrant sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 bash
 sed -i '8s/.*/ZSH_THEME="bira"/' .zshrc
+sed -i '52s/.*/plugins=(git aws npm node)/' .zshrc
 
 # add dos to unix converter
 # E.g. fromdos build.sh
