@@ -12,6 +12,6 @@ fi
 docker run -ti --rm -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v /workspace:/workspace \
-    -v ~/.mono-develop/.local/share:/home/developer/.local/share/MonoDevelop-5.0 \
+    -v ~/.mono-develop/.local/share.MonoDevelop-5.0:/home/developer/.local/share/MonoDevelop-5.0 \
     -v ~/.mono-develop/.cache/MonoDevelop-5.0:/home/developer/.cache/MonoDevelop-5.0 \
     -p 9000:9000  monodevelop 
