@@ -50,3 +50,6 @@ sudo pip install awscli
 su -c "aws configure set output json" vagrant
 #Set the default region for aws
 su -c "aws configure set region eu-west-1" vagrant
+
+# Install curl
+sudo apt-get install curl
