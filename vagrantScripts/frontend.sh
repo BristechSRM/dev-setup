@@ -12,6 +12,7 @@ sudo sh -c "$(wget https://deb.nodesource.com/setup_4.x -O -)"
 sudo apt-get install -y nodejs
 sudo npm install -g gulp
 sudo npm install -g webpack
+sudo npm install -g webpack-dev-server
 
 cd /home/vagrant
 echo "save-prefix=~" >> /home/vagrant/.npmrc
