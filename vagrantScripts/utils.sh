@@ -52,4 +52,4 @@ su -c "aws configure set output json" vagrant
 su -c "aws configure set region eu-west-1" vagrant
 
 # Install curl
-sudo apt-get install curl
+sudo apt-get install -y curl
