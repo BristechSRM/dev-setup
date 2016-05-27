@@ -7,6 +7,9 @@ Vagrant.configure(2) do |config|
   # This is a minimal ubuntu desktop
   config.vm.box = "amplifi/ubuntu-desktop-14.04.minimal"
 
+  # This will run in a host-only network
+  config.vm.network "private_network", ip: "192.168.56.101"
+
   config.vm.provider "virtualbox" do |vb|
   	vb.gui = true
     vb.memory = "3027"
