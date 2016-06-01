@@ -7,6 +7,8 @@
 # Install node js & npm
 
 # Set version to install as 4.x change 4 to 5 for 5.x
+echo "Installing frontend tools"
+
 sudo sh -c "$(wget https://deb.nodesource.com/setup_4.x -O -)"
 
 sudo apt-get install -y nodejs
@@ -18,3 +20,5 @@ cd /home/vagrant
 echo "save-prefix=~" >> /home/vagrant/.npmrc
 echo "bin-links=false" >> /home/vagrant/.npmrc
 sudo chown vagrant:vagrant -R /home/vagrant/.npmrc
+
+echo "Frontend tools install complete"

@@ -23,13 +23,13 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder "..", "/workspace"
 
   #Configure up with scripts
-  config.vm.provision "shell", path: "vagrantScripts/backend-mono.sh"
+  config.vm.provision "shell", path: "vagrantScripts/utils.sh"
 
   config.vm.provision "shell", path: "vagrantScripts/backend-docker.sh"
 
-  config.vm.provision "shell", path: "vagrantScripts/frontend.sh"
+  config.vm.provision "shell", path: "vagrantScripts/backend-mono.sh"
 
-  config.vm.provision "shell", path: "vagrantScripts/utils.sh"
+  config.vm.provision "shell", path: "vagrantScripts/frontend.sh"
 
   config.vm.provision "shell", inline: "echo Vagrant Provision complete"
 end

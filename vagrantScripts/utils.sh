@@ -3,6 +3,7 @@
 #
 # Script for installing optional tools/utilities for development
 #
+echo "Installing Utilities"
 sudo apt-get update
 # Get terminator. Better terminal emulator
 sudo apt-get install -y terminator
@@ -53,3 +54,5 @@ su -c "aws configure set region eu-west-1" vagrant
 
 # Install curl
 sudo apt-get install -y curl
+
+echo "Utilities install complete"
