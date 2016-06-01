@@ -19,9 +19,14 @@ sudo apt-get install -y docker-engine
 # Add vagrant to the docker group
 sudo usermod -aG docker vagrant
 
-sudo -i
-curl -L https://github.com/docker/compose/releases/download/1.7.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
-chmod +x /usr/local/bin/docker-compose
-exit
+# Install docker compose
+sudo sh -c "curl -L https://github.com/docker/compose/releases/download/1.7.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose"
+sudo sh -c "chmod +x /usr/local/bin/docker-compose"
+
+# setup bash completion for zsh
+su -c "mkdir -p ~/.zsh/completion" vagrant
+su -c "curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/zsh/_docker-compose > ~/.zsh/completion/_docker-compose" vagrant
+su -c "fpath=(~/.zsh/completion $fpath)" vagrant
+su -c "autoload -Uz compinit && compinit -i" vagrant
 
 echo "Docker tools install complete"
