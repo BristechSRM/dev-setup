@@ -17,6 +17,7 @@ sudo apt-get update
 sudo apt-get install -y docker-engine
 
 # Add vagrant to the docker group
+sudo groupadd docker
 sudo usermod -aG docker vagrant
 
 # Install docker compose
