@@ -31,5 +31,6 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision "shell", path: "vagrantScripts/frontend.sh"
 
-  config.vm.provision "shell", inline: "echo Vagrant Provision complete"
+  #Kill session for vagrant and force user to login to refresh user groups.
+  config.vm.provision "shell", inline: "sudo pkill -u vagrant"
 end
