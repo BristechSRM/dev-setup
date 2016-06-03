@@ -1,4 +1,4 @@
-#!/bin/sh -eu
+#!/bin/sh -euv
 # Script for installing optional tools/utilities for development
 
 echo "Installing Utilities"

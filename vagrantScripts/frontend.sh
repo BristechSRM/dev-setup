@@ -1,4 +1,4 @@
-#!/bin/sh -eu
+#!/bin/sh -euv
 # Script  for installing frontend dev depenedencies
 
 # Install node js & npm

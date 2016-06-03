@@ -1,4 +1,4 @@
-#!/bin/sh -eu
+#!/bin/sh -euv
 # Script for installing dev dependencies for mono
 
 #
