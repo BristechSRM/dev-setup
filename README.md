@@ -9,7 +9,11 @@ The development dependencies for this project come in the form of a [vagrant](ht
 While vagrant manages virtual machines, it does not actually run them. For that you will need a virtual machine provider. Currently the project supports only [VirtualBox](https://www.virtualbox.org) as a provider. Download from [here](https://www.virtualbox.org/wiki/Downloads).
 
 ## Vagrant up
+>Note: The default password for the vagrant user is `vagrant`
+
 With the two dependencies installed you can now clone this repository and from base directory run `vagrant up`. This will pull a linux distro image and provision box with several scripts installing the necessary dependencies to build and run the project from vagrant. It'll take a while so feel free to pop to sainsburys for team cookies.
+
+When vagrant up is complete, the vagrant user will be logged out. Log back in with the password `vagrant`. This is done because we are setting user groups for docker. These cannot be used until the user logs out and back in. 
 
 ### Initial User Configuration
 In addition to configuration set as apart of vagrant up, there are some configuration settings that are custom for each user. To Ensure these are set, run `./firstUpConfig.sh` after your first vagrant up of the vagrant box (I.e. when creating a clean box, not when you bring up a suspended box).
