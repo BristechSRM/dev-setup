@@ -1,5 +1,5 @@
 #! /bin/bash
-
+set -euv
 #
 # Script for installing optional tools/utilities for development
 #
@@ -28,7 +28,7 @@ sudo apt-get install tofrodos
 wget -O /tmp/atom-amd64.deb https://atom.io/download/deb
 sudo dpkg -i /tmp/atom-amd64.deb
 mkdir -p /home/vagrant/.atom
-cp /workspace/vagrantScripts/configs/atomconfig.cson /home/vagrant/.atom/config.cson
+cp /workspace/dev-setup/vagrantScripts/configs/atomconfig.cson /home/vagrant/.atom/config.cson
 chown vagrant:vagrant -R /home/vagrant/.atom
 
 # Firefox

@@ -1,5 +1,5 @@
 #! /bin/bash
-
+set -euv
 #
 # Script  for installing frontend dev depenedencies
 #
@@ -10,7 +10,7 @@
 echo "Installing frontend tools"
 
 sudo sh -c "$(wget https://deb.nodesource.com/setup_4.x -O -)"
-
+sudo apt-get update
 sudo apt-get install -y nodejs
 sudo npm install -g gulp
 sudo npm install -g webpack
