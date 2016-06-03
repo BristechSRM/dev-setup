@@ -1,5 +1,5 @@
 #!/bin/sh -euv
-# Script  for installing frontend dev depenedencies
+# Script for installing frontend dev depenedencies
 
 # Install node js & npm
 
