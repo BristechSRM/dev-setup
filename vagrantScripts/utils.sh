@@ -1,8 +1,6 @@
-#! /bin/bash
-set -euv
-#
+#!/bin/sh -eu
 # Script for installing optional tools/utilities for development
-#
+
 echo "Installing Utilities"
 sudo apt-get update
 # Get terminator. Better terminal emulator
@@ -15,7 +13,7 @@ sudo apt-get install -y git
 sudo apt-get install -y zsh
 sudo chsh vagrant -s /bin/zsh
 zsh -f
-sudo su vagrant sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+sudo su vagrant sh -c "$(wget -qO- https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 bash
 sed -i '8s/.*/ZSH_THEME="bira"/' .zshrc
 sed -i '52s/.*/plugins=(git aws npm node)/' .zshrc
@@ -25,7 +23,7 @@ sed -i '52s/.*/plugins=(git aws npm node)/' .zshrc
 sudo apt-get install tofrodos
 
 # Atom editor
-wget -O /tmp/atom-amd64.deb https://atom.io/download/deb
+wget -qO /tmp/atom-amd64.deb https://atom.io/download/deb
 sudo dpkg -i /tmp/atom-amd64.deb
 mkdir -p /home/vagrant/.atom
 cp /workspace/dev-setup/vagrantScripts/configs/atomconfig.cson /home/vagrant/.atom/config.cson

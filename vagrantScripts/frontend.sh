@@ -1,15 +1,12 @@
-#! /bin/bash
-set -euv
-#
+#!/bin/sh -eu
 # Script  for installing frontend dev depenedencies
-#
 
 # Install node js & npm
 
 # Set version to install as 4.x change 4 to 5 for 5.x
 echo "Installing frontend tools"
 
-sudo sh -c "$(wget https://deb.nodesource.com/setup_4.x -O -)"
+wget -qO- https://deb.nodesource.com/setup_4.x | sudo -E /bin/bash -
 sudo apt-get update
 sudo apt-get install -y nodejs
 sudo npm install -g gulp

@@ -1,6 +1,6 @@
-#! /bin/bash
+#!/bin/sh -eu
 # Script for installing dev dependencies for docker
-set -euv
+
 #
 # Install docker
 #
@@ -20,7 +20,7 @@ sudo apt-get install -y docker-engine
 sudo usermod -aG docker vagrant
 
 # Install docker compose
-sudo sh -c "curl -L https://github.com/docker/compose/releases/download/1.7.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose"
+sudo sh -c "curl -sL https://github.com/docker/compose/releases/download/1.7.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose"
 sudo sh -c "chmod +x /usr/local/bin/docker-compose"
 
 echo "Docker tools install complete"

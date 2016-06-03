@@ -1,6 +1,6 @@
-#! /bin/bash
+#!/bin/sh -eu
 # Script for installing dev dependencies for mono
-set -euv
+
 #
 # Install mono et al
 #
